@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMB TİCARET</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #eee;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 10px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      color: #ccc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(180deg, #222, #000);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .btn {
+      background-color: #ff6600;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      margin: 10px;
+      display: inline-block;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #e55b00;
+      transform: translateY(-3px);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 10%;
+      background-color: #111;
+    }
+
+    h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #444;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    /* Galeri Slider */
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 10px;
+    }
+
+    .gallery img {
+      border-radius: 10px;
+      min-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover { transform: scale(1.05); }
+
+    /* Referans Slider */
+    .references {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .references img {
+      min-width: 200px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .references img:hover { transform: scale(1.05); }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+      color: #bbb;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      nav a {
+        display: block;
+        margin: 5px 0;
+      }
+      .gallery img, .references img {
+        min-width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html">
+      <img src="images/logo_hmb.jpg" alt="HMB Ticaret Logo">
+    </a>
+    <nav>
+      <a href="#anasayfa">Anasayfa</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#urunler">Ürünler</a>
+      <a href="#gruplar">Ürün Grupları</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#referanslar">Referanslar</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="anasayfa" class="hero">
+    <h1>HMB TİCARET</h1>
+    <p>Kaliteli hırdavat ve yapı malzemelerinde güvenin adresi.</p>
+    <a href="#hakkimizda" class="btn">Hakkımızda</a>
+    <a href="#urunler" class="btn">Ürünlerimiz</a>
+  </section>
+
+  <!-- Hakkımızda -->
+  <section id="hakkimizda">
+    <h2>Hakkımızda</h2>
+    <p>HMB Ticaret olarak sektörde uzun yıllardır kaliteli hırdavat ve yapı malzemeleri tedariki yapmaktayız. Müşteri memnuniyetini ön planda tutarak, güvenilir hizmet anlayışımızla sizlere en uygun çözümleri sunuyoruz.</p>
+  </section>
+
+  <!-- Ürünler -->
+  <section id="urunler">
+    <h2>Ürünler</h2>
+    <div class="grid">
+      <div class="card">El Aletleri</div>
+      <div class="card">Vida & Bağlantı Elemanları</div>
+      <div class="card">Elektrikli Aletler</div>
+      <div class="card">İnşaat Malzemeleri</div>
+    </div>
+  </section>
+
+  <!-- Ürün Grupları -->
+  <section id="gruplar">
+    <h2>Ürün Grupları</h2>
+    <p>Ürün yelpazemiz geniş bir kategoriyi kapsamaktadır: el aletleri, elektrikli makineler, bağlantı elemanları, boya malzemeleri ve daha fazlası.</p>
+  </section>
+
+  <!-- Galeri -->
+  <section id="galeri">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <img src="urunler/ızeltas.jpg" alt="Galeri 1">
+      <img src="urunler/bay-teck.jpg" alt="Galeri 2">
+      <img src="urunler/eltos.jpg" alt="Galeri 3">
+      <img src="urunler/koral.jpg" alt="Galeri 4">
+      <img src="urunler/standart.jpg" alt="Galeri 5">
+    </div>
+  </section>
+
+  <!-- Referanslar -->
+  <section id="referanslar">
+    <h2>Referanslar</h2>
+    <div class="references">
+      <img src="referanslar/ref1.jpg" alt="Referans 1">
+      <img src="referanslar/ref2.jpg" alt="Referans 2">
+      <img src="referanslar/ref3.jpg" alt="Referans 3">
+      <!-- İhtiyacın kadar görsel ekle -->
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section id="iletisim">
+    <h2>İletişim</h2>
+    <p>📞 Tel: 0554 524 4092<br>📧 E-posta: hmbticaret@gmail.com<br>🌐 www.hmbticaret.com</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 HMB TİCARET | Tüm hakları saklıdır.
+  </footer>
+
+</body>
+</html>
